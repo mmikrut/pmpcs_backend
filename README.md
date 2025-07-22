@@ -13,9 +13,9 @@ The Minimum Viable Product (MVP) focuses on core functionality: API endpoints, m
 - **Environments**: Linux (development and production)
 
 ## Installation
-1. **Clone the Repository** (if not already done):
+1. **Clone the Repository**:
    ```
-   git clone <repository-url>
+   git clone https://github.com/mmikrut/pmpcs_backend.git
    cd pmpcs_backend
    ```
 
@@ -94,10 +94,12 @@ The API endpoints are as follows:
    ```
    sqlite3 pmpcs.db "SELECT * FROM sessions;"
    ```
+3. Example session tested: `073815eb-76f9-419d-aa09-fd04425320e5` (status updated to 'received', paid_amount 100.0).
 
-## Notes
+## Additional Notes
 - The MVP is designed for development and testing on Linux environments.
 - No actual payments are processed; the system handles confirmations only.
+- The `venv` directory is excluded from version control via `.gitignore` to avoid environment-specific files. Ensure a local `.gitignore` file contains `venv/` if not already present.
 - For production, consider Docker containerization and database migration to PostgreSQL.
 - Future expansions include verifiable credentials, QR codes, and partial payments.
 
